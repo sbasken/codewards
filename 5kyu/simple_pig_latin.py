@@ -5,6 +5,7 @@
 # pig_it('Pig latin is cool') # igPay atinlay siay oolcay
 # pig_it('Hello world !')     # elloHay orldway !
 
+
 def pig_it(text):
     print(text)
     split_text = text.split()
@@ -16,3 +17,4 @@ def pig_it(text):
             answer += word[1:] + word[0] + 'ay '
     print(answer[:-1])
     return answer[:-1] if answer[-1] == " " else answer
+
