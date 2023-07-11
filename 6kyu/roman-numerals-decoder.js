@@ -10,6 +10,8 @@ solution('XXI'); // should return 21
 ```
 */
 
+/// solution 2
+
 function solution (roman) {
     const symbols = {
       I: 1, V : 5, X : 10, L : 50, C : 100, D :500, M : 1000    
@@ -24,3 +26,25 @@ function solution (roman) {
     }
     return number
 }
+
+/// solution 1
+
+function solution (roman) {
+    const symbols = {
+      I: 1, V : 5, X : 10, L : 50, C : 100, D :500, M : 1000    
+    }
+      if (roman in symbols) {
+      return symbols[roman]
+    } else {
+      let number = 0
+      for (let i = 0; i < roman.length; i++) {
+        if (symbols[roman[i]]  < symbols[roman[i+1]]) {
+          number -= symbols[roman[i]]
+        } else {
+          number += symbols[roman[i]]
+        }
+        
+      }
+      return number
+    }
+  }
