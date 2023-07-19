@@ -24,6 +24,9 @@
 # 49 < n < 5000
 # Enjoy it! This kata will be translated in another languages soon
 
+
+### needs to cut down runtime to pass the final test
+
 def mult_triangle(n):
     print('n', n)
     total_sum = 0
